@@ -17,7 +17,15 @@ describe('My Third suite',function(){
         cy.wrap($el).click();
       }
       })
+     // hide and show button for field 
+      
+     cy.get('#displayed-text').should('be.visible');
+     cy.get('#hide-textbox').click();
+     cy.get('#displayed-text').should('not.be.visible');
+     cy.get('#show-textbox').click();
+     cy.get('#displayed-text').should('be.visible');
 
+     
     })
   })
 
