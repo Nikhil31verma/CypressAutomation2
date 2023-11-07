@@ -24,7 +24,9 @@ describe('My Third suite',function(){
      cy.get('#displayed-text').should('not.be.visible');
      cy.get('#show-textbox').click();
      cy.get('#displayed-text').should('be.visible');
-
+       
+     // radio button check
+     cy.get('[value="radio2"]').check().should('be.checked');
      
     })
   })
